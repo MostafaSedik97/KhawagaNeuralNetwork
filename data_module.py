@@ -24,7 +24,6 @@ def load_images_from_folder(folder):
             print(filename)
             temp[int(filename[6])] = 1
             np.y.append(temp)
-        #print(np.images)
     np.x=np.array(np.y)   
     return np.images, np.x
 
@@ -74,24 +73,3 @@ def split(feature,label):
   traininglabels, testlabels,trainingfeatures,testfeatures = label[training_idx,:],label[test_idx,:],feature[training_idx,:],feature[test_idx,:]
   return traininglabels,testlabels,trainingfeatures,testfeatures
 
-
-
-
-
-'''np.labels=getlabel(folder)
-np.normalized_features=[]
-np.normalized_features=normalization(np.fetaure_matrix)
-np.traininglabels,np.testlabels,np.trainingfeatures,np.testfeatures=split(np.normalized_features,np.labels)
-
-x_train = np.trainingfeatures
-y_train = np.traininglabels
-x_val = np.testfeatures
-y_val = np.testlabels'''
-
-'''pd.DataFrame(np.fetaure_matrix).to_csv("features4.csv")
-pd.DataFrame(np.labels).to_csv("labels.csv")
-pd.DataFrame(np.normalized_features).to_csv("normalized_features.csv")
-pd.DataFrame(np.trainingfeatures).to_csv("trainingfeatures.csv")
-pd.DataFrame(np.testfeatures).to_csv("testfeatures.csv")
-pd.DataFrame(np.traininglabels).to_csv("traininglabels.csv")
-pd.DataFrame(np.testlabels).to_csv("testlabels.csv")'''

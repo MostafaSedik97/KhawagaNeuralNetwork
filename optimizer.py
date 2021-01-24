@@ -4,8 +4,6 @@ class optimizer:
 
    def __init__(self,weights,lr,delta):
      self.lr=lr
-     #self.weights=np.zeros((1,2))
-     #self.delta=np.zeros((self.weights.shape[0],self.weights.shape[1]))
      self.delta=delta
      self.weights=weights
      self.weights=np.array(self.weights)
@@ -15,30 +13,20 @@ class optimizer:
 
       return self.weights
     
-
-    #self.weights=weight
-    #self.lr=lr
-    #self.delta=weight_update
-    #weights=weights-lr*weight_update  # nshof zft delta btt7sb fen#
    
-
    def momentum_based(self,beta):
       V =np.zeros((self.weights.shape[0],self.weights.shape[1])) 
-      #V =np.zeros((2,2)) 
       V=V+np.multiply(beta,V)-np.multiply(self.lr,self.delta)
-      #self.weights=self.weights+V
-      print(V)
       self.weights= self.weights+V
       return self.weights
 
    
    def Nesstrove(self,beta):
       V =np.zeros((self.weights.shape[0],self.weights.shape[1]))
-      #3aizaa a3ml update ll update_weight#
+      
 
    def adagrad(self):
       A=np.zeros((self.weights.shape[0],self.weights.shape[1]))
-      #A=np.zeros((2,2))
       A=np.sum(np.power(self.delta, 2))
       self.weights=self.weights-np.multiply((self.lr/np.sqrt(A)),self.delta)
       return self.weights
@@ -46,14 +34,13 @@ class optimizer:
    def RMSProp(self,raw):
     
       A=np.zeros((self.weights.shape[0],self.weights.shape[1]))
-      #A=np.zeros((2,2))
       A=np.sum(np.multiply(np.multiply(raw,A)+(1-raw),np.power(self.delta,2)))
       self.weights=self.weights-np.multiply((self.lr/np.sqrt(A)),self.delta)
       return self.weights
-      #raw randomm?
+
     
        
-     #def RMSPropNestrov(self,)   
+ 
 
    def adaDelta(self,raw,epsilon):
       

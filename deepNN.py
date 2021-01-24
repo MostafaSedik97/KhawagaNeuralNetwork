@@ -68,13 +68,10 @@ class DeepNeuralNetwork():
 
         
     def loss(self,A, Y,m):
-
-#hn2sm wla la2
-  
       cost = -(1.0/m) * np.sum(Y*np.log(A) + (1-Y)*np.log(1-A))
       cost = np.squeeze(cost)
       return cost
-      #return - 1/m*(Y * np.log(AL)).sum()
+
 
     def compute_accuracy(self, x_val, y_val):
         '''

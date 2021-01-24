@@ -30,12 +30,6 @@ class SoftmaxLayer(Layer):
           else: 
             self.W=w.GD()
             self.b=b.GD()
-             
 
-
-
-
-          # self.W -= self.lr * change_w
-          # self.b -= self.lr * change_b
 
           return np.dot(self.W.T, error)
