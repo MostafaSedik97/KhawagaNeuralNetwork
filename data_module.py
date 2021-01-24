@@ -21,7 +21,6 @@ def load_images_from_folder(folder):
           if np.image is not None:
             np.images.append(np.image1)
             temp = np.zeros(10)
-            print(filename)
             temp[int(filename[6])] = 1
             np.y.append(temp)
     np.x=np.array(np.y)   
@@ -54,18 +53,6 @@ def load_images_from_folder_compressed(folder):
         np.images.append(np.image)
     return np.images
 
-def getlabel(folder):
-  np.y=[]
-  np.x=[]
-  for root, dirs, files in os.walk(folder):
-      for filename in files:
-        if np.image is not None:
-          temp = np.zeros(10)
-          print(filename)
-          temp[int(filename[6])] = 1
-          np.y.append(temp)
-  np.x=np.array(np.y)
-  return np.x
 
 def split(feature,label):
   indices = np.random.permutation(feature.shape[0])
