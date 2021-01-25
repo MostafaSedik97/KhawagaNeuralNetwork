@@ -5,10 +5,7 @@ import numpy as np
 from FC import FC
 from optimizer import optimizer
 from activations import relu, sigmoid, softmax
-from keras.utils.np_utils import to_categorical
-from sklearn.model_selection import train_test_split
-from keras.datasets import mnist
-from keras.utils import np_utils
+import logging
 
 class DeepNeuralNetwork():
     def __init__(self, epochs=10, l_rate=0.001,optimizer_name='GD',beta=1,raw=1,epsilon=1):
@@ -105,7 +102,7 @@ class DeepNeuralNetwork():
             outputs = np.array(outputs)
             losses = self.loss(outputs,y_train,6000)
             accuracy, predict, labels = self.compute_accuracy(x_val, y_val)
-            print('Epoch: {0}, Time Spent: {1:.2f}s, Accuracy: {2:.2f}%, Loss: {3:.4f}'.format(
+            logging.info('Epoch: {0}, Time Spent: {1:.2f}s, Accuracy: {2:.2f}%, Loss: {3:.4f}'.format(
                 iteration+1, time.time() - start_time, accuracy * 100, losses
             ))
         return predict

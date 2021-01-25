@@ -1,11 +1,11 @@
-import glob
+
 import matplotlib.image as mpimg 
 import numpy as np
 from numpy import savetxt
 import os
 import pandas as pd 
-import pickle
-import webbrowser
+
+
 
 
 def load_images_from_folder(folder):
