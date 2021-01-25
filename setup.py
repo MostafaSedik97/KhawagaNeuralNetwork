@@ -1,3 +1,4 @@
+
 from distutils.core import setup
 setup (
   name = 'NeuralNetwork',         # How you named your package folder (MyLib)
@@ -27,4 +28,4 @@ setup (
     'Programming Language :: Python :: 3.7',
     'Programming Language :: Python :: 3.8',
   ],
-)
+
