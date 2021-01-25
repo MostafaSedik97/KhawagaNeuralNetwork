@@ -8,11 +8,10 @@ import pandas as pd
 
 
 
-def load_images_from_folder(folder):
+def load_images_from_folder(folder,no_labels):
     np.images = []
     np.y=[]
     np.x=[]
-    i=0
     for root, dirs, files in os.walk(folder):
         for filename in files:
           np.image = mpimg.imread(folder+ '/' + filename)
@@ -20,7 +19,7 @@ def load_images_from_folder(folder):
           np.pixel_size=np.image.shape   
           if np.image is not None:
             np.images.append(np.image1)
-            temp = np.zeros(10)
+            temp = np.zeros(no_labels)
             temp[int(filename[6])] = 1
             np.y.append(temp)
     np.x=np.array(np.y)   
@@ -37,7 +36,6 @@ def normalization(fetaure_matrix):
 def load_images_from_folder_compressed(folder):
     np.images = []
     np.y=[]
-    i=0
     for filename in os.listdir(folder):
       np.image = mpimg.imread(os.path.join(folder,filename))
       

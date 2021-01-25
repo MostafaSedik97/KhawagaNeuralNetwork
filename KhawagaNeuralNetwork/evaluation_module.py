@@ -7,12 +7,12 @@ class Evaluation_Module:
         self.pred = np.array(pred)
         self.Category =range(self.true.shape[1])
         self.lowestCategory = len(self.Category)
-        arrayinit = np.zeros((10, 10))
+        arrayinit = np.zeros((true.shape[1], true.shape[1]))
         self.matrix = pd.DataFrame(arrayinit, index=range(self.true.shape[1]), columns=range(self.true.shape[1]))
 
     def confusion_matrix(self):
         for i in range(self.true.shape[0]):
-            for j in range(10):
+            for j in range(self.true.shape[1]):
                 if self.true[i][j] == self.pred[i][j] == 1:
                     self.matrix.loc[[self.Category[j]], [self.Category[j]]] += 1
 

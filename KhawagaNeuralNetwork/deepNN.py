@@ -58,7 +58,7 @@ class DeepNeuralNetwork():
         '''
         L = len(self.layers) 
         error = y_train
-        for l in range(L-1,0,-1):
+        for l in range(L-1,-1,-1):
         # Calculate  update
           error = self.layers[l].backward(error)
         
@@ -100,7 +100,7 @@ class DeepNeuralNetwork():
                 self.backward_pass(y)
             
             outputs = np.array(outputs)
-            losses = self.loss(outputs,y_train,6000)
+            losses = self.loss(outputs,y_train,x_train.shape[0])
             accuracy, predict, labels = self.compute_accuracy(x_val, y_val)
             logging.info('Epoch: {0}, Time Spent: {1:.2f}s, Accuracy: {2:.2f}%, Loss: {3:.4f}'.format(
                 iteration+1, time.time() - start_time, accuracy * 100, losses
