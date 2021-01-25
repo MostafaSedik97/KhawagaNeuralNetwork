@@ -2,7 +2,7 @@ from distutils.core import setup
 setup (
   name = 'KhawagaNeuralNetwork',         # How you named your package folder (MyLib)
   packages = ['KhawagaNeuralNetwork'],   # Chose the same as "name"
-  version = '0.3',      # Start with a small number and increase it with every change you make
+  version = '0.4',      # Start with a small number and increase it with every change you make
   license='Apache License 2.0',        # Chose a license from here: https://help.github.com/articles/licensing-a-repository
   description = 'Deep Learning Framework that has multiple operations that could preprocess data, train and test the model with good accuracy.',   # Give a short description about your library
   author = 'Youssef khawaga',                   # Type in your name

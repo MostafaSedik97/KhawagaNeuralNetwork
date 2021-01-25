@@ -9,6 +9,6 @@ from KhawagaNeuralNetwork.deepNN import DeepNeuralNetwork
 from KhawagaNeuralNetwork.evaluation_module import Evaluation_Module
 from KhawagaNeuralNetwork.FC import FC
 from KhawagaNeuralNetwork.layer import Layer
-from KhawagaNeuralNetwork.optimizer import Optimizer
+from KhawagaNeuralNetwork.optimizer import optimizer
 from KhawagaNeuralNetwork.softmax_layer import SoftmaxLayer
  
