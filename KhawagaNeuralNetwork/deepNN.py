@@ -1,10 +1,10 @@
-from softmax_layer import SoftmaxLayer
-from evaluation_module import Evaluation_Module
+from KhawagaNeuralNetwork.softmax_layer import SoftmaxLayer
+from KhawagaNeuralNetwork.evaluation_module import Evaluation_Module
 import time
 import numpy as np
-from FC import FC
-from optimizer import optimizer
-from activations import relu, sigmoid, softmax
+from KhawagaNeuralNetwork.FC import FC
+from KhawagaNeuralNetwork.optimizer import optimizer
+from KhawagaNeuralNetwork.activations import relu, sigmoid, softmax
 import logging
 
 class DeepNeuralNetwork():

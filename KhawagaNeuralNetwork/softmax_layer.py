@@ -1,6 +1,6 @@
 import numpy as np
-from layer import Layer
-from optimizer import optimizer
+from KhawagaNeuralNetwork.layer import Layer
+from KhawagaNeuralNetwork.optimizer import optimizer
 
 class SoftmaxLayer(Layer):
   def __init__(self,size,activation,lr=0.001,optimizer_name='GD',beta=1,raw=1,epsilon=1):

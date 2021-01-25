@@ -1,6 +1,6 @@
 import numpy as np
-from optimizer import optimizer
-from layer import Layer
+from KhawagaNeuralNetwork.optimizer import optimizer
+from KhawagaNeuralNetwork.layer import Layer
 
 class FC(Layer):
   def __init__(self,size,activation,lr=0.001,optimizer_name='GD',beta=1,raw=1,epsilon=1):
